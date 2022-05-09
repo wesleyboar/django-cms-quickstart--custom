@@ -26,10 +26,8 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 # Application definition
 
 INSTALLED_APPS = [
-    'django_cms_quickstart_project',
-
     # base TACC CMS app
-    'django_cms_quickstart',
+    'tacc_core_cms_backend',
 
     # optional, but used in most projects
     'djangocms_admin_style',
@@ -103,7 +101,7 @@ MIDDLEWARE = [
     'cms.middleware.language.LanguageCookieMiddleware',
 ]
 
-ROOT_URLCONF = 'django_cms_quickstart_project.urls'
+ROOT_URLCONF = 'tacc_core_cms_backend.urls'
 
 TEMPLATES = [
     {
@@ -161,7 +159,7 @@ CMS_TEMPLATES = [
     ('feature.html', 'Bootstrap 4 Demo with two placeholders')
 ]
 
-WSGI_APPLICATION = 'django_cms_quickstart_project.wsgi.application'
+WSGI_APPLICATION = 'tacc_core_cms_backend.wsgi.application'
 
 
 # Database
@@ -228,7 +226,7 @@ DEFAULT_STORAGE_DSN = os.environ.get('DEFAULT_STORAGE_DSN')
 DefaultStorageClass = dsn_configured_storage_class('DEFAULT_STORAGE_DSN')
 
 # Django's DEFAULT_FILE_STORAGE requires the class name
-DEFAULT_FILE_STORAGE = 'django_cms_quickstart_project.settings.DefaultStorageClass'
+DEFAULT_FILE_STORAGE = 'tacc_core_cms_backend.settings.DefaultStorageClass'
 
 # only required for local file storage and serving, in development
 MEDIA_URL = 'media/'
