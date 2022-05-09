@@ -26,7 +26,10 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 # Application definition
 
 INSTALLED_APPS = [
-    'backend',
+    'django_cms_quickstart_project',
+
+    # base TACC CMS app
+    'django_cms_quickstart',
 
     # optional, but used in most projects
     'djangocms_admin_style',
@@ -100,7 +103,7 @@ MIDDLEWARE = [
     'cms.middleware.language.LanguageCookieMiddleware',
 ]
 
-ROOT_URLCONF = 'backend.urls'
+ROOT_URLCONF = 'django_cms_quickstart_project.urls'
 
 TEMPLATES = [
     {
@@ -126,6 +129,28 @@ TEMPLATES = [
     },
 ]
 
+
+
+# from django.template.loaders.app_directories import get_app_template_dirs
+# import os
+
+# template_dir_list = []
+# for template_dir in get_app_template_dirs('templates'):
+#     if settings.BASE_DIR in template_dir:
+#         template_dir_list.append(template_dir)
+
+
+# template_list = []
+# for template_dir in (template_dir_list + settings.TEMPLATES[0]['DIRS']):
+#     for base_dir, dirnames, filenames in os.walk(template_dir):
+#         for filename in filenames:
+#             template_list.append(os.path.join(base_dir, filename))
+
+# for template in template_list:
+#     print(template)
+
+
+
 CMS_TEMPLATES = [
     # a minimal template to get started with
     ('minimal.html', 'Minimal template'),
@@ -136,7 +161,7 @@ CMS_TEMPLATES = [
     ('feature.html', 'Bootstrap 4 Demo with two placeholders')
 ]
 
-WSGI_APPLICATION = 'backend.wsgi.application'
+WSGI_APPLICATION = 'django_cms_quickstart_project.wsgi.application'
 
 
 # Database
@@ -203,7 +228,7 @@ DEFAULT_STORAGE_DSN = os.environ.get('DEFAULT_STORAGE_DSN')
 DefaultStorageClass = dsn_configured_storage_class('DEFAULT_STORAGE_DSN')
 
 # Django's DEFAULT_FILE_STORAGE requires the class name
-DEFAULT_FILE_STORAGE = 'backend.settings.DefaultStorageClass'
+DEFAULT_FILE_STORAGE = 'django_cms_quickstart_project.settings.DefaultStorageClass'
 
 # only required for local file storage and serving, in development
 MEDIA_URL = 'media/'
