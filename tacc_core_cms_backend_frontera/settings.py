@@ -26,6 +26,8 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 # Application definition
 
 INSTALLED_APPS = [
+    'tacc_core_cms_backend_frontera',
+
     # base TACC CMS app
     'tacc_core_cms_backend',
 
@@ -226,7 +228,7 @@ DEFAULT_STORAGE_DSN = os.environ.get('DEFAULT_STORAGE_DSN')
 DefaultStorageClass = dsn_configured_storage_class('DEFAULT_STORAGE_DSN')
 
 # Django's DEFAULT_FILE_STORAGE requires the class name
-DEFAULT_FILE_STORAGE = 'tacc_core_cms_backend.settings.DefaultStorageClass'
+DEFAULT_FILE_STORAGE = 'tacc_core_cms_backend_frontera.settings.DefaultStorageClass'
 
 # only required for local file storage and serving, in development
 MEDIA_URL = 'media/'
