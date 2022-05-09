@@ -23,7 +23,7 @@ django==3.2.13
     #   -r requirements.in
     #   django-classy-tags
     #   django-cms
-    #   django-cms-quickstart
+    #   tacc-core-cms-backend
     #   django-formtools
     #   django-sekizai
     #   django-storages
@@ -37,7 +37,7 @@ django-classy-tags==2.0.0
 django-cms==3.10.0
     # via
     #   -r requirements.in
-    #   django-cms-quickstart
+    #   tacc-core-cms-backend
     #   djangocms-attributes-field
     #   djangocms-bootstrap4
     #   djangocms-file
@@ -48,7 +48,7 @@ django-cms==3.10.0
     #   djangocms-style
     #   djangocms-text-ckeditor
     #   djangocms-video
-django-cms-quickstart @ https://git@github.com/wesleyboar/django-cms-quickstart/archive/refs/heads/task/FP-1487-from-submod-to-apps.zip
+tacc-core-cms-backend @ https://git@github.com/wesleyboar/django-cms-quickstart/archive/refs/heads/task/FP-1487-from-submod-to-apps.zip
     # via -r requirements.in
 django-filer @ https://github.com/django-cms/django-filer/archive/refs/tags/2.1.1.zip
     # via

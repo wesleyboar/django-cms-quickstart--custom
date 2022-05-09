@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_cms_quickstart_project.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tacc_core_cms_backend.settings')
 
 application = get_wsgi_application()
