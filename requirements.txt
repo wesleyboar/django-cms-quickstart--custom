@@ -18,17 +18,18 @@ cssselect2==0.4.1
     # via svglib
 dj-database-url==0.5.0
     # via -r requirements.in
-django==3.2.13
+django==3.1.14
     # via
     #   -r requirements.in
     #   django-classy-tags
     #   django-cms
-    #   tacc-core-cms-backend
     #   django-formtools
+    #   django-js-asset
     #   django-sekizai
     #   django-storages
     #   django-treebeard
     #   easy-thumbnails
+    #   tacc-core-cms-backend
 django-classy-tags==2.0.0
     # via
     #   -r requirements.in
@@ -37,7 +38,6 @@ django-classy-tags==2.0.0
 django-cms==3.10.0
     # via
     #   -r requirements.in
-    #   tacc-core-cms-backend
     #   djangocms-attributes-field
     #   djangocms-bootstrap4
     #   djangocms-file
@@ -48,8 +48,7 @@ django-cms==3.10.0
     #   djangocms-style
     #   djangocms-text-ckeditor
     #   djangocms-video
-tacc-core-cms-backend @ https://git@github.com/wesleyboar/django-cms-quickstart/archive/refs/heads/task/FP-1487-from-submod-to-apps.zip
-    # via -r requirements.in
+    #   tacc-core-cms-backend
 django-filer @ https://github.com/django-cms/django-filer/archive/refs/tags/2.1.1.zip
     # via
     #   -r requirements.in
@@ -71,7 +70,7 @@ django-storages==1.11.1
     # via django-storage-url
 django-treebeard==4.5.1
     # via django-cms
-djangocms-admin-style==3.1.1
+djangocms-admin-style==2.0.2
     # via
     #   -r requirements.in
     #   django-cms
@@ -162,6 +161,8 @@ sqlparse==0.4.2
     # via django
 svglib==1.1.0
     # via easy-thumbnails
+tacc-core-cms-backend @ https://git@github.com/wesleyboar/django-cms-quickstart/archive/refs/heads/task/FP-1487-from-submod-to-apps.zip
+    # via -r requirements.in
 tinycss2==1.1.0
     # via
     #   cssselect2
