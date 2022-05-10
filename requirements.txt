@@ -161,7 +161,7 @@ sqlparse==0.4.2
     # via django
 svglib==1.1.0
     # via easy-thumbnails
-tacc-core-cms-backend @ https://git@github.com/wesleyboar/django-cms-quickstart/archive/refs/heads/task/FP-1487-from-submod-to-apps.zip
+tacc-core-cms-backend @ git+https://git@github.com/wesleyboar/django-cms-quickstart@task/FP-1487-from-submod-to-apps
     # via -r requirements.in
 tinycss2==1.1.0
     # via
