@@ -1,4 +1,10 @@
-# TACC CMS Project (ex: Frontera)
+# TACC CMS Project (ex: Frontera) Proof-of-Concept
+
+## Goal
+
+Load a base CMS project as a dependency, and customize it with this sample CMS project.
+
+## Testing
 
 1. Follow the "Try it" instructions.
 
@@ -29,7 +35,27 @@
     3. Load the page you had created.
     4. Confirm that page loads the added and edited template.
 
-</details>
+    </details>
+
+5. ...
+
+## Status
+
+- [x] Install a base CMS as a dependency.
+  - Added base repo ([wesleyboar/django-cms-quickstart](https://github.com/wesleyboar/django-cms-quickstart)) as [a dependency in `requirements.txt`](https://github.com/wesleyboar/django-cms-quickstart--project/blob/task/FP-1487-from-submod-to-apps/requirements.txt#L164).
+- [x] Inherit templates from a base CMS.
+    - Tested [`APP_DIRS: True`](https://github.com/wesleyboar/django-cms-quickstart/blob/main/backend/settings.py#L109).
+- [x] Remove duplicate project configuration.
+    - Imported & Extended base repo configuration:
+        - Settings: [`..._frontera/settings.py`](https://github.com/wesleyboar/django-cms-quickstart--project/blob/task/FP-1487-from-submod-to-apps/tacc_core_cms_backend_frontera/settings.py)
+        - URLs: [`..._frontera/urls.py`](https://github.com/wesleyboar/django-cms-quickstart--project/blob/task/FP-1487-from-submod-to-apps/tacc_core_cms_backend_frontera/urls.py)
+        - Server: [`..._frontera/wsgi.py`](https://github.com/wesleyboar/django-cms-quickstart--project/blob/task/FP-1487-from-submod-to-apps/tacc_core_cms_backend_frontera/urls.py)
+- [ ] Design this repo to be forked for each project.
+- [ ] Get peer review.
+- [ ] Remove duplicate Docker configuration.
+- [ ] Ask how Camino can load a repo per project.
+- [ ] Get peer approval.
+- [ ] Implement on CMS and one project.
 
 ---
 
