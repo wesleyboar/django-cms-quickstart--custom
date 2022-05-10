@@ -1,3 +1,38 @@
+# TACC CMS Project (ex: Frontera)
+
+1. Follow the "Try it" instructions.
+
+2. Create a minimal page.
+
+3. <details><summary>Test customizing settings.</summary>
+
+    1. In `tacc_core_cms_backend_frontera/settings.py`
+
+    ```python
+    CMS_TEMPLATES = [
+        ('no_such_template.html', 'Minimal template')
+    ]
+    ```
+
+    2. Load the page you had created.
+    3. Confirm that page __fails__ to load template and searches for:
+        1. `tacc_core_cms_backend_frontera/templates/no_such_template.html`
+        2. `.../site-packages/tacc_core_cms_backend/templates/no_such_template.html`
+        3. ...
+
+    </details>
+
+4. <details><summary>Test inheriting a template.</summary>
+
+    1. Copy [`django-cms-quickstart:tacc_core_cms_backend/templates/minimal.html`](https://github.com/wesleyboar/django-cms-quickstart/blob/task/FP-1487-from-submod-to-apps/tacc_core_cms_backend/templates/minimal.html) to `tacc_core_cms_backend_frontera/templates/minimal.html`.
+    2. Edit the new template to render an obvious difference, e.g. add `<h1>New Template</h1>` above `{% placeholder "content" %}`.
+    3. Load the page you had created.
+    4. Confirm that page loads the added and edited template.
+
+</details>
+
+---
+
 ![Python application](https://github.com/django-cms/django-cms-quickstart/workflows/Python%20application/badge.svg?branch=main)
 
 # django CMS quickstart
