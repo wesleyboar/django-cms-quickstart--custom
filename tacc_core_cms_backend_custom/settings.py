@@ -2,7 +2,7 @@ from tacc_core_cms_backend.settings import *
 
 # Application definition
 INSTALLED_APPS = [
-    'tacc_core_cms_backend_frontera',
+    'tacc_core_cms_backend_custom',
 ] + INSTALLED_APPS
 
 # Import local settings

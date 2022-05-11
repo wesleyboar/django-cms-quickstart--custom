@@ -1,4 +1,4 @@
-# TACC CMS Project (ex: Frontera) Proof-of-Concept
+# TACC CMS (Custom) Project Proof-of-Concept
 
 ## Goal
 
@@ -12,7 +12,7 @@ Load a base CMS project as a dependency, and customize it with this sample CMS p
 
 3. <details><summary>Test customizing settings.</summary>
 
-    1. In `tacc_core_cms_backend_frontera/settings.py`
+    1. In `tacc_core_cms_backend_custom/settings.py`
 
     ```python
     CMS_TEMPLATES = [
@@ -22,7 +22,7 @@ Load a base CMS project as a dependency, and customize it with this sample CMS p
 
     2. Load the page you had created.
     3. Confirm that page __fails__ to load template and searches for:
-        1. `tacc_core_cms_backend_frontera/templates/no_such_template.html`
+        1. `tacc_core_cms_backend_custom/templates/no_such_template.html`
         2. `.../site-packages/tacc_core_cms_backend/templates/no_such_template.html`
         3. ...
 
@@ -30,7 +30,7 @@ Load a base CMS project as a dependency, and customize it with this sample CMS p
 
 4. <details><summary>Test inheriting a template.</summary>
 
-    1. Copy [`django-cms-quickstart:tacc_core_cms_backend/templates/minimal.html`](https://github.com/wesleyboar/django-cms-quickstart/blob/task/FP-1487-from-submod-to-apps/tacc_core_cms_backend/templates/minimal.html) to `tacc_core_cms_backend_frontera/templates/minimal.html`.
+    1. Copy [`django-cms-quickstart:tacc_core_cms_backend/templates/minimal.html`](https://github.com/wesleyboar/django-cms-quickstart/blob/task/FP-1487-from-submod-to-apps/tacc_core_cms_backend/templates/minimal.html) to `tacc_core_cms_backend_custom/templates/minimal.html`.
     2. Edit the new template to render an obvious difference, e.g. add `<h1>New Template</h1>` above `{% placeholder "content" %}`.
     3. Load the page you had created.
     4. Confirm that page loads the added and edited template.
@@ -47,9 +47,9 @@ Load a base CMS project as a dependency, and customize it with this sample CMS p
     - Tested [`APP_DIRS: True`](https://github.com/wesleyboar/django-cms-quickstart/blob/main/backend/settings.py#L109).
 - [x] Remove duplicate project configuration.
     - Imported & Extended base repo configuration:
-        - Settings: [`..._frontera/settings.py`](https://github.com/wesleyboar/django-cms-quickstart--project/blob/task/FP-1487-from-submod-to-apps/tacc_core_cms_backend_frontera/settings.py)
-        - URLs: [`..._frontera/urls.py`](https://github.com/wesleyboar/django-cms-quickstart--project/blob/task/FP-1487-from-submod-to-apps/tacc_core_cms_backend_frontera/urls.py)
-        - Server: [`..._frontera/wsgi.py`](https://github.com/wesleyboar/django-cms-quickstart--project/blob/task/FP-1487-from-submod-to-apps/tacc_core_cms_backend_frontera/urls.py)
+        - Settings: [`..._custom/settings.py`](https://github.com/wesleyboar/django-cms-quickstart--project/blob/task/FP-1487-from-submod-to-apps/tacc_core_cms_backend_custom/settings.py)
+        - URLs: [`..._custom/urls.py`](https://github.com/wesleyboar/django-cms-quickstart--project/blob/task/FP-1487-from-submod-to-apps/tacc_core_cms_backend_custom/urls.py)
+        - Server: [`..._custom/wsgi.py`](https://github.com/wesleyboar/django-cms-quickstart--project/blob/task/FP-1487-from-submod-to-apps/tacc_core_cms_backend_custom/urls.py)
 - [ ] Design this repo to be forked for each project.
 - [ ] Get peer review.
 - [ ] Remove duplicate Docker configuration.
