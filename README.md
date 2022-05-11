@@ -50,7 +50,9 @@ Load a base CMS project as a dependency, and customize it with this sample CMS p
         - Settings: [`..._custom/settings.py`](https://github.com/wesleyboar/django-cms-quickstart--project/blob/task/FP-1487-from-submod-to-apps/tacc_core_cms_backend_custom/settings.py)
         - URLs: [`..._custom/urls.py`](https://github.com/wesleyboar/django-cms-quickstart--project/blob/task/FP-1487-from-submod-to-apps/tacc_core_cms_backend_custom/urls.py)
         - Server: [`..._custom/wsgi.py`](https://github.com/wesleyboar/django-cms-quickstart--project/blob/task/FP-1487-from-submod-to-apps/tacc_core_cms_backend_custom/urls.py)
-- [ ] Design this repo to be forked for each project.
+- [x] Design this repo to be forked for each project.
+    - Named the app `tacc_core_cms_backend_custom`.
+    - Added minimal settings to inherit.
 - [ ] Get peer review.
 - [ ] Remove duplicate Docker configuration.
 - [ ] Ask how Camino can load a repo per project.
