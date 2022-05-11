@@ -14,11 +14,11 @@ Load a base CMS project as a dependency, and customize it with this sample CMS p
 
     1. In `tacc_core_cms_backend_custom/settings.py`
 
-    ```python
-    CMS_TEMPLATES = [
-        ('no_such_template.html', 'No such template')
-    ]
-    ```
+        ```python
+        CMS_TEMPLATES = [
+            ('no_such_template.html', 'No such template')
+        ]
+        ```
 
     2. Load the page you had created.
     3. Confirm that page __fails__ to load template and searches for:
@@ -31,17 +31,18 @@ Load a base CMS project as a dependency, and customize it with this sample CMS p
     </details>
 
 3. <details><summary>Test local settings.</summary>
+    (This also basically test secrets which is loaded the same way.)
 
     0. Undo changes from previous testing step "Test customizing settings".
     1. Load the page you had created.
     2. Confirm that page loads __succcessfully__.
     3. Create `tacc_core_cms_backend_custom/settings_local.py` with content:
 
-    ```python
-    CMS_TEMPLATES = [
-        ('another_false_template.html', 'False template')
-    ]
-    ```
+        ```python
+        CMS_TEMPLATES = [
+            ('another_false_template.html', 'False template')
+        ]
+        ```
 
     4. Load the page you had created.
     5. Confirm that page __fails__ to load template and searches for:
