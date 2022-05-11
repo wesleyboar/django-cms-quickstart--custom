@@ -16,7 +16,7 @@ Load a base CMS project as a dependency, and customize it with this sample CMS p
 
     ```python
     CMS_TEMPLATES = [
-        ('no_such_template.html', 'Minimal template')
+        ('no_such_template.html', 'No such template')
     ]
     ```
 
@@ -25,15 +25,41 @@ Load a base CMS project as a dependency, and customize it with this sample CMS p
         1. `tacc_core_cms_backend_custom/templates/no_such_template.html`
         2. `.../site-packages/tacc_core_cms_backend/templates/no_such_template.html`
         3. ...
+    4. Load the page you had created.
+    5. Confirm that page loads __succcessfully__.
+
+    </details>
+
+3. <details><summary>Test local settings.</summary>
+
+    0. Undo changes from previous testing step "Test customizing settings".
+    1. Load the page you had created.
+    2. Confirm that page loads __succcessfully__.
+    3. Create `tacc_core_cms_backend_custom/settings_local.py` with content:
+
+    ```python
+    CMS_TEMPLATES = [
+        ('another_false_template.html', 'False template')
+    ]
+    ```
+
+    4. Load the page you had created.
+    5. Confirm that page __fails__ to load template and searches for:
+        1. `tacc_core_cms_backend_custom/templates/another_false_template.html`
+        2. `.../site-packages/tacc_core_cms_backend/templates/another_false_template.html`
+        3. ...
 
     </details>
 
 4. <details><summary>Test inheriting a template.</summary>
 
-    1. Copy [`django-cms-quickstart:tacc_core_cms_backend/templates/minimal.html`](https://github.com/wesleyboar/django-cms-quickstart/blob/task/FP-1487-from-submod-to-apps/tacc_core_cms_backend/templates/minimal.html) to `tacc_core_cms_backend_custom/templates/minimal.html`.
-    2. Edit the new template to render an obvious difference, e.g. add `<h1>New Template</h1>` above `{% placeholder "content" %}`.
-    3. Load the page you had created.
-    4. Confirm that page loads the added and edited template.
+    0. Undo changes from previous testing step "Test local settings".
+    1. Load the page you had created.
+    2. Confirm that page loads __succcessfully__.
+    3. Copy [`django-cms-quickstart:tacc_core_cms_backend/templates/minimal.html`](https://github.com/wesleyboar/django-cms-quickstart/blob/task/FP-1487-from-submod-to-apps/tacc_core_cms_backend/templates/minimal.html) to `tacc_core_cms_backend_custom/templates/minimal.html`.
+    4. Edit the new template to render an obvious difference, e.g. add `<h1>New Template</h1>` above `{% placeholder "content" %}`.
+    5. Load the page you had created.
+    6. Confirm that page loads the added and edited template.
 
     </details>
 
