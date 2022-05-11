@@ -6,6 +6,9 @@ db.sqlite3
 # Django
 /staticfiles_collected/
 
+# Django (custom)
+settings_local.py
+
 # Divio
 .divio
 /data.tar.gz
